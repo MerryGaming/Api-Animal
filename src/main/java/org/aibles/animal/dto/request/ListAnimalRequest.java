@@ -5,21 +5,18 @@ import org.aibles.animal.entity.Animal;
 public class ListAnimalRequest extends CreateAnimalRequest{
 
 
-  public ListAnimalRequest() {
-    super();
-  }
+//  public ListAnimalRequest() {
+//    super();
+//  }
 
-  public ListAnimalRequest(String name, int date, float weight, String place_to_live,
-      String country) {
-    super(name, date, weight, place_to_live, country);
-  }
+
 
   @Override
   public String toString() {
     return "ListAnimalRequest{}";
   }
 
-  public Animal toEntity() {
+  public Animal toAnimal() {
     Animal animal = new Animal();
     animal.setName(this.getName());
     animal.setDate(this.getDate());

@@ -15,17 +15,9 @@ public class CreateAnimalRequest  {
   @NotBlank
   private String country;
 
-  public CreateAnimalRequest() {
-  }
+//  public CreateAnimalRequest() {
+//  }
 
-  public CreateAnimalRequest(String name, int date, float weight, String place_to_live,
-      String country) {
-    this.name = name;
-    this.date = date;
-    this.weight = weight;
-    this.place_to_live = place_to_live;
-    this.country = country;
-  }
 
   public String getName() {
     return name;
@@ -67,18 +59,8 @@ public class CreateAnimalRequest  {
     this.country = country;
   }
 
-  @Override
-  public String toString() {
-    return "CreateAnimalRequest{" +
-        "name='" + name + '\'' +
-        ", date=" + date +
-        ", weight=" + weight +
-        ", place_to_live='" + place_to_live + '\'' +
-        ", country='" + country + '\'' +
-        '}';
-  }
 
-  public Animal toEntity() {
+  public Animal toAnimal() {
     Animal animal = new Animal();
     animal.setName(this.getName());
     animal.setDate(this.getDate());
