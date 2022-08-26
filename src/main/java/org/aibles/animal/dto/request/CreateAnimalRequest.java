@@ -3,22 +3,20 @@ package org.aibles.animal.dto.request;
 import com.sun.istack.NotNull;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import org.aibles.animal.dto.response.AnimalResponse;
 import org.aibles.animal.entity.Animal;
 
-public class CreateAnimalRequest  {
+public class CreateAnimalRequest {
 
   @NotBlank(message = "can't be empty")
   @Size(min = 2, max = 100, message = "lengths name from 2 to 100")
   private String name;
-
   @NotNull
   private int date;
   @NotNull
   private float weight;
   @NotBlank(message = "can't be empty")
   @Size(min = 2, max = 200, message = "lengths place to live from 2 to 200")
-  private String place_to_live;
+  private String placeToLive;
   @NotBlank(message = "can't be empty")
   @Size(min = 2, max = 200, message = "lengths country name from 2 to 200")
   private String country;
@@ -50,12 +48,12 @@ public class CreateAnimalRequest  {
     this.weight = weight;
   }
 
-  public String getPlace_to_live() {
-    return place_to_live;
+  public String getPlaceToLive() {
+    return placeToLive;
   }
 
-  public void setPlace_to_live(String place_to_live) {
-    this.place_to_live = place_to_live;
+  public void setPlaceToLive(String placeToLive) {
+    this.placeToLive = placeToLive;
   }
 
   public String getCountry() {
@@ -66,13 +64,12 @@ public class CreateAnimalRequest  {
     this.country = country;
   }
 
-
   public Animal toAnimal() {
     Animal animal = new Animal();
     animal.setName(this.getName());
     animal.setDate(this.getDate());
     animal.setWeight(this.getWeight());
-    animal.setPlace_to_live(this.getPlace_to_live());
+    animal.setPlaceToLive(this.getPlaceToLive());
     animal.setCountry(this.getCountry());
     return animal;
   }

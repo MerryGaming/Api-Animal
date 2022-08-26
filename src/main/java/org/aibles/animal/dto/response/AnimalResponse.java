@@ -1,27 +1,27 @@
 package org.aibles.animal.dto.response;
 
-import javax.validation.constraints.NotBlank;
 import org.aibles.animal.entity.Animal;
 
 public class AnimalResponse {
 
-  private Long id;
+  private long id;
   private String name;
   private int date;
   private float weight;
-  private String place_to_live;
+  private String placeToLive;
   private String country;
 
   public AnimalResponse() {
   }
 
 
-  public AnimalResponse(Long id, String name, int date, float weight, String place_to_live, String country) {
+  public AnimalResponse(long id, String name, int date, float weight, String placeToLive,
+      String country) {
     this.id = id;
     this.name = name;
     this.date = date;
     this.weight = weight;
-    this.place_to_live = place_to_live;
+    this.placeToLive = placeToLive;
     this.country = country;
   }
 
@@ -49,12 +49,12 @@ public class AnimalResponse {
     this.weight = weight;
   }
 
-  public String getPlace_to_live() {
-    return place_to_live;
+  public String getPlaceToLive() {
+    return placeToLive;
   }
 
-  public void setPlace_to_live(String place_to_live) {
-    this.place_to_live = place_to_live;
+  public void setPlaceToLive(String placeToLive) {
+    this.placeToLive = placeToLive;
   }
 
   public String getCountry() {
@@ -69,7 +69,7 @@ public class AnimalResponse {
     return id;
   }
 
-  public void setId(Long id) {
+  public void setId(long id) {
     this.id = id;
   }
 
@@ -80,7 +80,7 @@ public class AnimalResponse {
         ", name='" + name + '\'' +
         ", date=" + date +
         ", weight=" + weight +
-        ", place_to_live='" + place_to_live + '\'' +
+        ", placeToLive='" + placeToLive + '\'' +
         ", country='" + country + '\'' +
         '}';
   }
@@ -91,7 +91,7 @@ public class AnimalResponse {
     response.setName(animal.getName());
     response.setDate(animal.getDate());
     response.setWeight(animal.getWeight());
-    response.setPlace_to_live(animal.getPlace_to_live());
+    response.setPlaceToLive(animal.getPlaceToLive());
     response.setCountry(animal.getCountry());
     return response;
   }

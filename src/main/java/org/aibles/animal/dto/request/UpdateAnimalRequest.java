@@ -2,7 +2,7 @@ package org.aibles.animal.dto.request;
 
 import org.aibles.animal.entity.Animal;
 
-public class UpdateAnimalRequest extends CreateAnimalRequest{
+public class UpdateAnimalRequest extends CreateAnimalRequest {
 
   private long id;
 
@@ -15,7 +15,7 @@ public class UpdateAnimalRequest extends CreateAnimalRequest{
     animal.setName(this.getName());
     animal.setDate(this.getDate());
     animal.setWeight(this.getWeight());
-    animal.setPlace_to_live(this.getPlace_to_live());
+    animal.setPlaceToLive(this.getPlaceToLive());
     animal.setCountry(this.getCountry());
     return animal;
   }
