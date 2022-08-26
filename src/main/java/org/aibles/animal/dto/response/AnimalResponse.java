@@ -6,13 +6,10 @@ import org.aibles.animal.entity.Animal;
 public class AnimalResponse {
 
   private Long id;
-  @NotBlank
   private String name;
   private int date;
   private float weight;
-  @NotBlank
   private String place_to_live;
-  @NotBlank
   private String country;
 
   public AnimalResponse() {

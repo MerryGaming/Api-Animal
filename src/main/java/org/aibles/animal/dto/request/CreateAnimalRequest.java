@@ -1,18 +1,26 @@
 package org.aibles.animal.dto.request;
 
+import com.sun.istack.NotNull;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import org.aibles.animal.dto.response.AnimalResponse;
 import org.aibles.animal.entity.Animal;
 
 public class CreateAnimalRequest  {
 
-  @NotBlank
+  @NotBlank(message = "can't be empty")
+  @Size(min = 2, max = 100, message = "lengths name from 2 to 100")
   private String name;
+
+  @NotNull
   private int date;
+  @NotNull
   private float weight;
-  @NotBlank
+  @NotBlank(message = "can't be empty")
+  @Size(min = 2, max = 200, message = "lengths place to live from 2 to 200")
   private String place_to_live;
-  @NotBlank
+  @NotBlank(message = "can't be empty")
+  @Size(min = 2, max = 200, message = "lengths country name from 2 to 200")
   private String country;
 
   public CreateAnimalRequest() {
