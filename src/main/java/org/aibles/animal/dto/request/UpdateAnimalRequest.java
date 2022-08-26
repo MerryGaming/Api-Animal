@@ -4,25 +4,16 @@ import org.aibles.animal.entity.Animal;
 
 public class UpdateAnimalRequest extends CreateAnimalRequest{
 
+  private long id;
   public UpdateAnimalRequest() {
   }
 
-  public UpdateAnimalRequest(String name, int date, float weight, String place_to_live,
+  public UpdateAnimalRequest(long id, String name, int date, float weight, String place_to_live,
       String country) {
     super(name, date, weight, place_to_live, country);
+    this.id = id;
   }
-
-
-//  @Override
-//  public String toString() {
-//    return "UpdateAnimalRequest{" +
-//        "name='" + name + '\'' +
-//        ", date=" + date +
-//        ", weight=" + weight +
-//        ", place_to_live='" + place_to_live + '\'' +
-//        ", country='" + country + '\'' +
-//        '}'
-//  }
+  
 
   public Animal toEntity() {
     Animal animal = new Animal();
