@@ -5,8 +5,10 @@ import org.aibles.animal.entity.Animal;
 public class UpdateAnimalRequest extends CreateAnimalRequest{
 
   private long id;
-//  public UpdateAnimalRequest() {
-//  }
+
+  public UpdateAnimalRequest() {
+    super();
+  }
 
   public Animal toAnimal() {
     Animal animal = new Animal();

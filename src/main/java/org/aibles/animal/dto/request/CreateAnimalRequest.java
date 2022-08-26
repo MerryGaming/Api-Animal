@@ -15,9 +15,8 @@ public class CreateAnimalRequest  {
   @NotBlank
   private String country;
 
-//  public CreateAnimalRequest() {
-//  }
-
+  public CreateAnimalRequest() {
+  }
 
   public String getName() {
     return name;

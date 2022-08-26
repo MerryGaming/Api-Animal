@@ -4,16 +4,8 @@ import org.aibles.animal.entity.Animal;
 
 public class ListAnimalRequest extends CreateAnimalRequest{
 
-
-//  public ListAnimalRequest() {
-//    super();
-//  }
-
-
-
-  @Override
-  public String toString() {
-    return "ListAnimalRequest{}";
+  public ListAnimalRequest() {
+    super();
   }
 
   public Animal toAnimal() {
